@@ -1,2 +1,12 @@
 # react-blog
-A blog built with React + Webpack
+
+A simple blog page built with React + Webpack.
+
+* React
+* Webpack (+ Webpack Dev Server)
+* ES2015
+
+## Usage
+
+1. `npm install`
+2. `npm run build & npm run dev`
