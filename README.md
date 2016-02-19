@@ -10,3 +10,4 @@ A simple blog page built with React + Webpack.
 
 1. `npm install`
 2. `npm run build & npm run dev`
+3. `http://localhost:8080`
