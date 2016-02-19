@@ -1,0 +1,133 @@
+@import "bourbon/bourbon";
+
+html, body, h1, h2,
+h3, h4, h5, small {
+  font-family: 'Palatino Linotype', Palatino, serif;
+}
+
+a {
+  color: steelblue;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+%top-bar {
+   background: none;
+   color: #999;
+}
+
+.top-bar {
+  @extend %top-bar;
+  @include size(100% auto);
+  @include position(fixed, null null);
+  @include transition(all .5s ease);
+  z-index: 5000;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  &.scrollNav {
+    background-color: #fff;
+    opacity: .85;
+    @include transition(all .5s ease);
+    border-bottom: 1px solid rgba(200, 200, 200, .8);
+    .menu li,
+    .menu li a {
+      color: #555;
+    }
+  }
+  ul {
+    @extend %top-bar;
+  }
+}
+
+.big-banner {
+  background: url("http://i.dailymail.co.uk/i/pix/2013/09/05/article-2413253-1BA49C21000005DC-981_634x798.jpg") center 80%;
+  background-size: cover;
+  margin-bottom: 50px;
+  @include transition(all .5s ease);
+  &.blurred {
+    @include filter(blur(5px));
+  }
+}
+
+.highlight {
+  opacity: .7;
+  color: steelblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.menu li,
+.menu li a {
+  color: white;
+}
+
+.callout {
+  background-color: slategray;
+  &.primary {
+    background: none;
+  }
+  &.large {
+    padding: 9em 3em 7em;
+  }
+  &.secondary {
+    background-color: #f9f9f9;
+    border-color: #ddd;
+    border-radius: 4px;
+    input {
+      border-color: #ddd;
+      border-radius: 4px;
+    }
+  }
+  .callout-post {
+    border-top: 3px solid #333;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #aaa;
+    .menu a {
+      color: #aaa;
+    }
+  }
+}
+
+.blog-post {
+  margin-bottom: 70px;
+  h3 {
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: .05em;
+    font-size: 25px;
+  }
+  small {
+    float: right;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+.form-area {
+  margin-bottom: 60px;
+  button {
+    background-color: steelblue;
+    text-align: center;
+    color: white;
+    padding: .7em;
+    border-radius: 4px;
+    width: 100%;
+    margin: 10px auto;
+    @include transition(all .3s ease);
+    &:hover {
+      background-color: lighten(steelblue, 8%);
+    }
+  }
+}
+
+h5 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: steelblue;
+}
