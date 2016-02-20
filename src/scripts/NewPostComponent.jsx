@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import helper from './helper.js';
 
-export default class NewPost extends React.Component {
+export default class NewPost extends Component {
   render() {
     let details = this.props.details;
     return (
@@ -25,4 +25,8 @@ export default class NewPost extends React.Component {
       </div>
     )
   }
+};
+
+NewPost.propTypes = {
+  details: PropTypes.object.isRequired
 };
